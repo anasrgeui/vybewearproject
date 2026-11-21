@@ -1,0 +1,284 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+}
+h2,.bouton,.filtre {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    letter-spacing: 3px;
+}
+header {
+    background: transparent;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+section {
+    text-align: center;
+}
+section p {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+nav {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.hero-content {
+    margin: auto;
+    padding: 40px 0;
+}
+nav a:hover {
+    color: #F73D07;
+}
+.burger {
+    display: none;
+    background: none;
+    border:none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+#acceuil {
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px 40px;
+    box-sizing: border-box;
+}
+#acceuil::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    z-index: -2;
+}
+#acceuil::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: -1;
+}
+
+#acceuil h2 {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+#acceuil p {
+    font-size: 22px;
+    font-weight: bold;
+}
+#acceuil .bouton {
+    font-weight: bold;
+}
+.bouton {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.bouton:hover {
+    background-color: #cccccc;
+    transform: scale(1.05);
+}
+#collection h2 {
+    font-weight: bold;
+}
+#apropos h2,#contact h2 {
+    font-size: 38px;
+    margin: 0;
+}
+#collection h2::after,#apropos h2::after,#contact h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #F73D07;
+    margin: 12px auto 0;
+}
+#collection {
+    padding: 60px 20px;
+    text-align: center;
+}
+.filtres {
+    margin: 30px 0;
+}
+.filtre {
+    background: transparent;
+    border: 1px solid #111111;
+    padding: 10px 25px;
+    margin: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.filtre.actif,.filtre:hover {
+    background-color: #F73D07;
+    border-color: #F73D07;
+    color: white;
+}
+.produits{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(240px ,1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.produit {
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.produit:hover {
+    transform: translate(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.produit img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+.produit:hover img {
+    transform: scale(1.05);
+}
+.produit h3 {
+    font-family: 'Bebas Neue' , Arial, sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 15px 0 5px;
+}
+.prix {
+    color: #F73D07;
+    font-weight: bold;
+    margin: 0;
+}
+#apropos{
+    background-color: #111111;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+#apropos p {
+    max-width: 600px;
+    margin: 20px auto 0;
+    line-height: 1.7;
+    color: #cccccc;
+}
+#contact {
+    text-align: center;
+    padding: 70px 20px;
+}
+.formulaire {
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+.formulaire input,.formulaire textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 2px solid #111111;
+    font-size: 16px;
+    font-family: 'poppins' , Arial, sans-serif;
+    box-sizing: border-box;
+}
+.formulaire .bouton {
+    background-color: #F73D07;
+    color: white;
+    margin-top: 0;
+    cursor: pointer;
+}
+.formulaire .bouton:hover {
+    background-color: #c93000;
+}
+#retour{
+    margin-top: 15px;
+    font-weight: bold;
+}
+#retour.erreur {
+    color: #d00000;
+}
+#retour.succes {
+    color: #1a8a2e;
+}
+footer {
+    background-color: #F73D07;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+footer p {
+    margin: 0;
+}
+@media (max-width : 600px){
+    header {
+        font-size: 28px;
+    }
+    #acceuil {
+        padding: 100px 20px;
+    }
+    #acceuil h2{
+        font-size: 36px;
+    }
+    .hero-content {
+        margin: auto;
+    }
+    .burger {
+        display: block;
+        margin: 0 auto;
+    }
+    .liens{
+        display: none;
+    }
+    .liens.ouvert {
+        display: block;
+    }
+    .liens a {
+        display: block;
+        margin: 0;
+        padding: 12px;
+    }
+}
